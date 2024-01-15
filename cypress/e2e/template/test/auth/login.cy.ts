@@ -1,4 +1,4 @@
-import { SELECTORS } from '../../constants';
+import { SELECTORS } from '../../utils/constants';
 
 
 describe('Login Tests', () => {

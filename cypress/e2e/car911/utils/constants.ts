@@ -4,4 +4,9 @@ export const SELECTORS={
     inputPassword :'input[id="input-14"]',
     buttonIniciar : 'span[class="v-btn__content"]'
     
- };
+};
+
+export const CREDENTIALS={
+    EMAIL_CAR911:"admin@car911.com",
+    PASSWORD_CAR911:"prueba@2023"
+}

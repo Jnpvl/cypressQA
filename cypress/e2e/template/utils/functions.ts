@@ -1,11 +1,10 @@
-import { SELECTORS } from "./constants";
+import { CREDENTIALS, SELECTORS } from "./constants";
 
-const email:string = Cypress.env('USER_EMAIL');
-const password:string = Cypress.env('USER_PASSWORD');
+
 
 export function login(){
-    cy.get(SELECTORS.inputEmail).type(email);
-    cy.get(SELECTORS.inputPassword).type(password);
+    cy.get(SELECTORS.inputEmail).type(CREDENTIALS.email);
+    cy.get(SELECTORS.inputPassword).type(CREDENTIALS.password);
     cy.get(SELECTORS.buttonIniciar).click();
     cy.contains('button', 'Aceptar').click();
    

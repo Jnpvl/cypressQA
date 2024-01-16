@@ -4,3 +4,7 @@ export const SELECTORS={
    inputPassword :'#input-13',
    buttonIniciar : '.v-btn__content',
 }
+export const CREDENTIALS={
+   email:'prueba@emai.com',
+   password: 'prueba'
+}

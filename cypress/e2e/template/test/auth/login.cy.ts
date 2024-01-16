@@ -1,4 +1,4 @@
-import { SELECTORS } from '../../utils/constants';
+import { CREDENTIALS, SELECTORS } from '../../utils/constants';
 
 
 describe('Login Tests', () => {
@@ -22,12 +22,10 @@ describe('Login Tests', () => {
     cy.contains('#swal2-html-container', 'Error en las credenciales').should('be.visible');
   });
 
-  const email = Cypress.env('USER_EMAIL');
-  const password = Cypress.env('USER_PASSWORD');
 
   it('Login correcto', function () {
-    cy.get(SELECTORS.inputEmail).type(email);
-    cy.get(SELECTORS.inputPassword).type(password);
+    cy.get(SELECTORS.inputEmail).type(CREDENTIALS.email);
+    cy.get(SELECTORS.inputPassword).type(CREDENTIALS.password);
     cy.get(SELECTORS.buttonIniciar).click();
     cy.contains('button', 'Aceptar').click();
     cy.get('.text-h4').should('be.visible');

@@ -1,10 +1,13 @@
-import { SELECTORS } from "./constants";
+import { CREDENTIALS, SELECTORS } from "./constants";
 
-const email:string = Cypress.env('EMAIL_CONTRATOSXY');
-const password:string = Cypress.env('PASSWORD_CONTRATOSXY');
 
 export function login(){
-    cy.get(SELECTORS.inputEmail).type(email);
-    cy.get(SELECTORS.inputPassword).type(password);
+    cy.get(SELECTORS.inputEmail).type(CREDENTIALS.EMAIL_CONTRATOSXY);
+    cy.get(SELECTORS.inputPassword).type(CREDENTIALS.PASSWORD_CONTRATOSXY);
     cy.get(SELECTORS.buttonIniciar).click();
+}
+
+export function redireccionClientes(){
+    cy.get(SELECTORS.menuClientes).click();
+    cy.get(SELECTORS.buttonCrearCliente).click();
 }
